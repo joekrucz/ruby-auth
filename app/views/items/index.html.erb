@@ -1,5 +1,8 @@
+<head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 <h1>Your Items</h1>
-<%= link_to 'Add New Item', new_item_path %>
+<%= button_to 'Add New Item', new_item_path %>
 <ul>
   <% @items.each do |item| %>
     <li><%= item.name %></li>

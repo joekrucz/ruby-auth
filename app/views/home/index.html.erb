@@ -1,10 +1,16 @@
+<head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= csrf_meta_tags %>
+
 <h1>Welcome to the User Authentication App</h1>
 
 <% if user_signed_in? %>
   <p>Hello, <%= current_user.email %></p>
-  <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
-  <%= link_to 'Add Items', items_path %>
+  <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
+  <%= button_to 'Add Items', items_path %>
 <% else %>
-  <%= link_to 'Log in', new_user_session_path %>
-  <%= link_to 'Sign up', new_user_registration_path %>
+  <%= button_to 'Log in', new_user_session_path %>
+  <%= button_to 'Sign up', new_user_registration_path %>
 <% end %>

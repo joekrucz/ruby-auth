@@ -1,3 +1,6 @@
+<head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 <h1>Add a New Item</h1>
 <%= form_with model: @item do |form| %>
   <div>
@@ -8,4 +11,4 @@
     <%= form.submit %>
   </div>
 <% end %>
-<%= link_to 'Back', items_path %>
+<%= button_to 'Back', items_path %>
